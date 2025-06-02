@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"780eb1d0ae36419b93aab6602fabc107","collectionName":"Utenti eliminati","type":"collection"}

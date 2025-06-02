@@ -1,9 +1,9 @@
 from datetime import datetime
 from flask import jsonify, request
-from backend.config.db import conn_db
-from backend.models.attors.utente import Utente, utenti
-from backend.models.attors.ruolo import Ruolo
-from backend.models.message_reporting.segnalazione import segnalazioniAccettate
+from config.db import conn_db
+from models.attors.utente import Utente, utenti
+from models.attors.ruolo import Ruolo
+from models.message_reporting.segnalazione import segnalazioniAccettate
 
 db = conn_db()  # Connessione al database MongoDB
 utenti_eliminati = db['Utenti eliminati']  # Nome della collezione

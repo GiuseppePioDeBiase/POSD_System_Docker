@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from backend.models.attors.amministratore_di_sistema import AmministratoreDiSistema
+from models.attors.amministratore_di_sistema import AmministratoreDiSistema
 
 amministratore_bp = Blueprint('amministratore_bp', __name__)
 

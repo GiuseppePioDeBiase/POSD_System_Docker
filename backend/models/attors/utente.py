@@ -5,9 +5,9 @@ from flask_jwt_extended import create_access_token, get_jwt, get_jwt_identity, u
 from flask import request, jsonify, json
 from pymongo.errors import PyMongoError
 from werkzeug.security import generate_password_hash, check_password_hash
-from backend.config.db import conn_db
+from config.db import conn_db
 import regex
-from backend.models.attors.ruolo import Ruolo
+from models.attors.ruolo import Ruolo
 
 db = conn_db()  # Connessione al database MongoDB
 utenti = db['Utenti']  # Nome della collezione

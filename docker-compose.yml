@@ -1,0 +1,55 @@
+
+services:
+  compose_backend:
+    build: /backend
+    container_name: compose_backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+    networks:
+      - evoluzione-del-software
+    restart: unless-stopped
+    command: python app.py
+
+  frontend:
+    build: /frontend
+    container_name: compose_frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - compose_backend
+    networks:
+      - evoluzione-del-software
+    restart: unless-stopped
+    command: npm run dev
+
+  mongodb:
+    image: mongo:7
+    container_name: compose_db
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./backup:/backup
+    networks:
+      - evoluzione-del-software
+    restart: unless-stopped
+    command: >
+      bash -c "
+         mongod --bind_ip_all &
+         sleep 5 &&
+         mongorestore --drop --db POSD_System /backup/POSD_System &&
+         wait -n
+      "
+
+volumes:
+  mongodb_volumes:
+    name: mongodb_volumes
+
+networks:
+  evoluzione-del-software:
+    name: evoluzione-del-software
+    driver: bridge
+
+
+    

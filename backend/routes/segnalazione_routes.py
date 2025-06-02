@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from backend.models.message_reporting.segnalazione import Segnalazione
+from models.message_reporting.segnalazione import Segnalazione
 
 segnalazione_bp = Blueprint('segnalazione_bp', __name__)
 

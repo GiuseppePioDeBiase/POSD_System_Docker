@@ -1,5 +1,5 @@
 from flask import jsonify
-from backend.config.db import conn_db
+from config.db import conn_db
 
 # Connessione al database MongoDB
 db = conn_db()

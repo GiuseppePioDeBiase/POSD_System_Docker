@@ -1,8 +1,8 @@
-from backend.config.db import conn_db
-from backend.models.attors.ruolo import Ruolo
-from backend.models.message_reporting.base_message import BaseMessage
+from config.db import conn_db
+from models.attors.ruolo import Ruolo
+from models.message_reporting.base_message import BaseMessage
 from flask import request, jsonify
-from backend.models.attors.utente import utenti
+from models.attors.utente import utenti
 
 db = conn_db()
 

@@ -2,8 +2,8 @@ from flask import jsonify
 from datetime import datetime
 import platform
 import socket
-from backend.config.config import create_app
-from backend.routes import routes
+from config.config import create_app
+from routes import routes
 
 app = create_app()
 
@@ -35,4 +35,4 @@ def start():
 app.register_blueprint(routes)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(host="0.0.0.0", port=5000, debug=False)

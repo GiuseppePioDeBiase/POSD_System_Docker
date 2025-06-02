@@ -1,5 +1,5 @@
 from flask import Blueprint
-from backend.models.pkb.pattern import Pattern
+from models.pkb.pattern import Pattern
 import urllib
 
 pattern_bp = Blueprint('pattern_bp', __name__)

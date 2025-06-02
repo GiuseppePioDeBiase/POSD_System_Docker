@@ -21,7 +21,7 @@ Assicurati di avere i seguenti prerequisiti installati sulla tua macchina prima 
 
 1. Clona questo repository.
 2. Assicurati di avere Python installato sulla tua macchina.
-3. Crea un ambiente virtuale: `python -m venv venv`.
+3. Crea un ambiente virtuale: `.
 4. Attiva l'ambiente virtuale:
     - Su Windows: `venv\Scripts\activate`
     - Su Unix o MacOS: `source venv/bin/activate`

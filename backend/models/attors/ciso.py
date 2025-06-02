@@ -3,9 +3,9 @@ import io
 from bson import Binary, ObjectId
 from flask import request, jsonify, send_file
 from pymongo.errors import PyMongoError
-from backend.models.attors.utente import Utente, utenti
-from backend.models.attors.ruolo import Ruolo
-from backend.models.message_reporting.segnalazione import segnalazioneCollection, segnalazioniAccettate, \
+from models.attors.utente import Utente, utenti
+from models.attors.ruolo import Ruolo
+from models.message_reporting.segnalazione import segnalazioneCollection, segnalazioniAccettate, \
     segnalazioniRifiutate
 
 message_error = "Il ciso non esiste o non ha i privilegi necessari per visualizzare le segnalazioni."

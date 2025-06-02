@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from backend.models.attors.ciso import Ciso
+from models.attors.ciso import Ciso
 
 ciso_bp = Blueprint('ciso_bp', __name__)
 

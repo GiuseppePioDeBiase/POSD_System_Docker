@@ -1,6 +1,6 @@
-from backend.models.message_reporting.base_message import BaseMessage
+from models.message_reporting.base_message import BaseMessage
 from flask import jsonify, request
-from backend.config.db import conn_db
+from config.db import conn_db
 
 db = conn_db()
 feedbackCollection = db['Feedback']

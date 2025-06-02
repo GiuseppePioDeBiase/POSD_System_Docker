@@ -2,13 +2,4 @@ flask
 flask_cors
 flask-jwt-extended
 pymongo
-datatime
-urllib.parse
-platform
-socket
 regex
-secrets
-bson
-werkzeug.security
-PyMongoError
-base64
