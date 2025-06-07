@@ -55,7 +55,7 @@ Questo avvia:
 
 ### 3. Apri nel browser
 - Frontend: [http://localhost:5173](http://localhost:5173)
-- API Backend: [http://localhost:5000/api](http://localhost:5000/api)
+-  Backend: [http://localhost:5000/api](http://localhost:5000)
 
 ---
 
