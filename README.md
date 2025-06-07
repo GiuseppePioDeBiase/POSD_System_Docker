@@ -39,8 +39,8 @@ Sviluppo di un’applicazione web che integri ogni elemento della PRIVACY KNOWLE
 
 ### 1. Clona il repository
 ```bash
-git clone https://github.com/GiuseppePioDeBiase/POSD_System.git
-cd POSD_System
+git clone https://github.com/GiuseppePioDeBiase/Posd_System_Docker.git
+cd Posd_System_Docker
 ```
 
 ### 2. Avvia tutto con Docker Compose
