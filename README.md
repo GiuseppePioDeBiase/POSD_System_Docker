@@ -27,13 +27,18 @@ Sviluppo di un’applicazione web che integri ogni elemento della PRIVACY KNOWLE
 
 ## 🚀 Avvio rapido con Docker
 
-### 1. Clona il repository
+### 🧬1. Clona il repository
 ```bash
 git clone https://github.com/GiuseppePioDeBiase/Posd_System_Docker.git
 cd Posd_System_Docker
 ```
 
-### 2. Avvia tutto con Docker Compose
+###⌨️ 2. Apri Terminale
+```bash
+Apri terminale nella cartella dove c'è il contenuto clonato 
+```
+
+### 🐳3. Avvia tutto con Docker Compose
 ```bash
 docker compose up --build -d
 ```
