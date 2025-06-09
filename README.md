@@ -33,9 +33,9 @@ git clone https://github.com/GiuseppePioDeBiase/Posd_System_Docker.git
 cd Posd_System_Docker
 ```
 
-###⌨️ 2. Apri Terminale
+### ⌨️ 2. Apri Terminale
 ```bash
-Apri terminale nella cartella dove c'è il contenuto clonato 
+Apri terminale nella cartella con il contenuto clonato 
 ```
 
 ### 🐳3. Avvia tutto con Docker Compose
