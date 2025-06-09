@@ -11,16 +11,45 @@ Il `Dockerfile` del backend esegue questi step:
 5. Espone la porta `5000`.
 6. Avvia l'app con `CMD ["python", "app.py"]`.
 
-Esempio semplificato:
-
 ```dockerfile
 FROM python:3.12-slim
+
 WORKDIR /backend
+
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+
 COPY . .
+
 EXPOSE 5000
+
 CMD ["python", "app.py"]
+```
+
+---
+
+## 🔨 Dockerfile (Frontend)
+
+Il Dockerfile del frontend costruisce e avvia l'interfaccia React con Vite:
+
+```dockerfile
+FROM node:20-alpine
+
+WORKDIR /frontend
+
+COPY package.json ./
+
+COPY . .
+
+RUN npm install -g npm@latest
+
+RUN npm install --legacy-peer-deps
+
+RUN npm run build
+
+EXPOSE 5173
+
+CMD ["npm", "run", "dev"]
 ```
 
 ---
@@ -29,22 +58,59 @@ CMD ["python", "app.py"]
 
 Definisce tre servizi principali:
 
-### 📦 `mongodb`
-- Immagine: `mongo:7`
-- Porta: `27017:27017`
-- Volume montato per i backup
-- Ripristino automatico del dump con `mongorestore`
+```yaml
+services:
+  compose_backend:
+    build: /backend
+    container_name: compose_backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+    networks:
+      - evoluzione-del-software
+    restart: unless-stopped
+    command: python app.py
 
-### 📦 `backend`
-- Build dalla cartella `backend`
-- Porta esposta `5000:5000`
-- Dipende da MongoDB
-- Comunica usando `mongodb:27017`
+  frontend:
+    build: /frontend
+    container_name: compose_frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - compose_backend
+    networks:
+      - evoluzione-del-software
+    restart: unless-stopped
+    command: npm run dev
 
-### 📦 `frontend`
-- Build dalla cartella `frontend`
-- Porta esposta `5173:5173`
-- Avviato con `npm run dev`
+  mongodb:
+    image: mongo:7
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./backup:/backup
+    networks:
+      - evoluzione-del-software
+    restart: unless-stopped
+    command: >
+      bash -c "
+         mongod --bind_ip_all &
+         sleep 5 &&
+         mongorestore --drop --db POSD_System /backup/POSD_System &&
+         wait -n
+      "
+
+volumes:
+  mongodb_volumes:
+    name: mongodb_volumes
+
+networks:
+  evoluzione-del-software:
+    name: evoluzione-del-software
+    driver: bridge
+```
 
 ---
 
@@ -67,3 +133,8 @@ Usa:
 docker compose down
 ```
 per fermare e rimuovere i container in modo ordinato.
+
+Per rimuovere anche volumi e immagini:
+```bash
+docker compose down -v --rmi all
+```
