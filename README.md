@@ -72,7 +72,7 @@ POSD_System/
 
 ## ⚙️ Approfondimento tecnico: Dockerfile e docker-compose.yml
 
-👉 [Leggi il README tecnico](.docs/README_TECNICO.md)
+👉 [Leggi il README tecnico](docs/README_TECNICO.md)
 
 ---
 
