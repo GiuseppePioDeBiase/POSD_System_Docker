@@ -25,13 +25,7 @@ Sviluppo di un’applicazione web che integri ogni elemento della PRIVACY KNOWLE
    - Scarica da [https://nodejs.org/](https://nodejs.org/)
    - Include anche `npm` (Node Package Manager)
 
-4. **Python 3.12** (solo per sviluppo manuale, opzionale)
-   - Scarica da [https://www.python.org/](https://www.python.org/)
-   - Aggiungi al `PATH` durante l'installazione
-
-5. **Un editor di codice** (es. Visual Studio Code, PyCharm)
-
-6. **Browser moderno** (Chrome, Firefox, Edge)
+4. **Browser moderno** (Chrome, Firefox, Edge)
 
 ---
 
@@ -49,7 +43,7 @@ docker compose up --build -d
 ```
 
 Questo avvia:
-- MongoDB con restore automatico
+- MongoDB con backup 
 - Backend Flask (porta `5000`)
 - Frontend Vite (porta `5173`)
 
@@ -66,34 +60,6 @@ POSD_System/
 ├── frontend/
 ├── backup/              # Dump MongoDB
 ├── docker-compose.yml
-```
-
----
-
-## 🔄 Restore manuale del database
-Se necessario, puoi eseguire il restore manualmente con:
-```bash
-docker compose exec compose_db mongorestore --drop --db POSD_System /backup/POSD_System
-```
-
----
-
-## 🔧 Sviluppo manuale senza Docker (opzionale)
-
-### Backend (Flask)
-```bash
-cd backend
-python -m venv venv
-venv\Scripts\activate  # o source venv/bin/activate
-pip install -r requirements.txt
-python app.py
-```
-
-### Frontend (React/Vite)
-```bash
-cd frontend
-npm install
-npm run dev
 ```
 
 ---
