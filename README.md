@@ -21,11 +21,7 @@ Sviluppo di un’applicazione web che integri ogni elemento della PRIVACY KNOWLE
    - Scarica da [https://git-scm.com/](https://git-scm.com/)
    - Serve per clonare il progetto
 
-3. **Node.js** (consigliata versione 20.x)
-   - Scarica da [https://nodejs.org/](https://nodejs.org/)
-   - Include anche `npm` (Node Package Manager)
-
-4. **Browser moderno** (Chrome, Firefox, Edge)
+3. **Browser moderno** (Chrome, Firefox, Edge)
 
 ---
 
