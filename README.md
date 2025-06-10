@@ -20,6 +20,7 @@ Sviluppo di un’applicazione web che integri ogni elemento della PRIVACY KNOWLE
 2. **Git**
    - Scarica da [https://git-scm.com/](https://git-scm.com/)
    - Serve per clonare il progetto
+   - Video Download [Git Windows]:(https://www.youtube.com/watch?v=iYkLrXobBbA&ab_channel=CodeBear)
 
 3. **Browser moderno** (Chrome, Firefox, Edge)
 
