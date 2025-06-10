@@ -19,7 +19,7 @@ Sviluppo di un’applicazione web che integri ogni elemento della PRIVACY KNOWLE
 - Una volta installato, avvialo e assicurati che sia attivo.  
   Verifica la presenza dell’icona della balena **verde** nella traybar per confermare che tutto funzioni correttamente.
   
-  ![Docker](docs/image.png)
+  <img src="docs/image.png" alt="Docker" height="200px" />
 
 ## 2. **Git**
 - Scarica Git dal sito ufficiale:  
