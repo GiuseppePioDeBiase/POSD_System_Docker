@@ -15,14 +15,16 @@ Sviluppo di un’applicazione web che integri ogni elemento della PRIVACY KNOWLE
 
 1. **Docker Desktop**
    - Scarica da [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
+   <img src="docs/image.png" alt="Docker" width="300px"/>
    - Avvialo e assicurati che sia attivo (balena verde nella traybar)
 
 2. **Git**
    - Scarica da [https://git-scm.com/](https://git-scm.com/)
    - Serve per clonare il progetto
    - Video Download [Git Windows]:(https://www.youtube.com/watch?v=iYkLrXobBbA&ab_channel=CodeBear)
+   -  Video Download [Git MacOS]: https://www.youtube.com/watch?v=9GZmaxaQV0c&ab_channel=Codingenthusiast
 
-3. **Browser moderno** (Chrome, Firefox, Edge)
+3. **Browser moderno** (Chrome, Firefox, Edge ...)
 
 ---
 
