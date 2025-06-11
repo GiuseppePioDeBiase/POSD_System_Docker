@@ -59,7 +59,7 @@ Questo avvia:
 
 ### 🌐 4. Apri nel browser
 - Frontend: [http://localhost:5173](http://localhost:5173)
-- Backend: [http://localhost:5000/api](http://localhost:5000/api)
+- Backend: [http://localhost:5000](http://localhost:5000)
 
 ### 🔚 5. Chiudere tutto
 Quando vuoi spegnere i container:
