@@ -14,7 +14,7 @@ Sviluppo di un’applicazione web che integri ogni elemento della PRIVACY KNOWLE
 ### 🔧 Cosa installare sulla tua macchina
 
 ## 1. **Docker Desktop**
-- Scarica Docker Desktop dal sito ufficiale:  
+- Scarica Docker Desktop dal sito ufficiale (v.20.10+) :  
   👉 [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
 - Una volta installato, avvialo e assicurati che sia attivo.  
   Verifica la presenza dell’icona della balena **verde** nella traybar per confermare che tutto funzioni correttamente.
